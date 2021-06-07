@@ -25,7 +25,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function() {
     Route::group(['prefix' => '/admin'], function() {
         Route::group(['prefix' => '/products'], function() {
